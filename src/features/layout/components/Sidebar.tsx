@@ -41,7 +41,7 @@ const Item = ({
 
 const Sidebar = () => {
   return (
-    <Column bg="darkBackground" className="w-fit  h-[100vh] py-8 items-center gap-7 md:w-[255px] md:py-6">
+    <Column bg="darkBackground" className="w-fit h-[100vh] py-8 items-center gap-7 md:min-w-[255px] md:py-6">
       <Text title color="white" className="hidden max-w-[148px] text-center md:block">
         Repo Search
       </Text>

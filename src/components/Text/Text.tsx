@@ -20,9 +20,9 @@ const Text = ({ color, body = true, title, children, subtitle, bold, pointer, cl
         "text-text",
         {
           "text-md font-light": body,
-          "text-xl font-regular": title,
-          "text-lg font-regular": subtitle,
-          "text-md font-bold": bold,
+          "text-xl font-bold": title,
+          "text-lg font-bold": subtitle,
+          "font-bold": bold,
           "cursor-pointer": pointer,
         },
         className

@@ -41,7 +41,6 @@ module.exports = {
       light: "400",
       regular: "500",
       bold: "600",
-      black: "700",
     },
     borderRadius: {
       sm: "5px",
