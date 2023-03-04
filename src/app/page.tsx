@@ -1,5 +1,5 @@
-import Column from "@components/Column";
+import RepositoriesList from "@features/repositories/views/List";
 
 export default function Home() {
-  return <Column>Content</Column>;
+  return <RepositoriesList />;
 }
