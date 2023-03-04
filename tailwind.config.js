@@ -14,6 +14,7 @@ module.exports = {
       text: "#101828",
       gray: "#D0D5DD",
       lightText: "#8A92A6",
+      lighterText: "#D0D5DD",
       darkBackground: "#363740",
       background: "#EAECF0",
     },
@@ -30,6 +31,7 @@ module.exports = {
       9: "80px",
     },
     fontSize: {
+      xs: "12px",
       sm: "14px",
       md: "16px",
       lg: "28px",

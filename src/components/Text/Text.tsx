@@ -1,6 +1,6 @@
-import { getColorHex } from "@/core/styles/colors";
-import { cls } from "@/core/styles/cls";
-import type { Color } from "@/core/styles/theme";
+import { getColorHex } from "@core/styles/colors";
+import { cls } from "@core/styles/cls";
+import type { Color } from "@core/styles/theme";
 
 interface TextProps {
   color?: Color;
@@ -13,7 +13,7 @@ interface TextProps {
   className?: string;
 }
 
-const Text = ({ color, body, title, children, subtitle, bold, pointer, className }: TextProps) => {
+const Text = ({ color, body = true, title, children, subtitle, bold, pointer, className }: TextProps) => {
   return (
     <span
       className={cls(

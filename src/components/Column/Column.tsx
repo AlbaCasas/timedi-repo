@@ -1,8 +1,8 @@
 import React from "react";
 
-import type { Color } from "@/core/styles/theme";
-import { getColorHex } from "@/core/styles/colors";
-import { cls } from "@/core/styles/cls";
+import type { Color } from "@core/styles/theme";
+import { getColorHex } from "@core/styles/colors";
+import { cls } from "@core/styles/cls";
 
 interface ColumnProps {
   children: React.ReactNode;
