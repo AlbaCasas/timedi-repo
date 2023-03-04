@@ -1,0 +1,14 @@
+/*----
+GLOBAL STYLES
+----*/
+
+@import "./generic/base.scss";
+@import "./generic/generic.scss";
+
+/*----
+TAILWIND
+----*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
