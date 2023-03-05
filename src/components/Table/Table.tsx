@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
-import type { SyntheticEvent , PropsWithChildren } from "react";
+import type { SyntheticEvent, PropsWithChildren } from "react";
 import RCTable from "rc-table";
 
 import { cls } from "@core/styles/cls";
