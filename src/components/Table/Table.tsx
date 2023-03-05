@@ -14,8 +14,10 @@ interface TableProps {
   columns: object[];
   className?: string;
   loading?: boolean;
+  error?: boolean;
   rowKey?: string;
   onEmptyRender?: () => React.ReactNode;
+  onErrorRender?: () => React.ReactNode;
   onExpandRender?: (record: any) => React.ReactNode;
   onLoadingRender?: () => React.ReactNode;
 }
@@ -53,17 +55,24 @@ const Table = ({
   columns,
   className,
   loading,
+  error,
   rowKey,
   onLoadingRender,
+  onErrorRender,
   onEmptyRender,
   onExpandRender,
 }: TableProps) => {
+  const getEmptyText = () => {
+    if (error && onErrorRender) return onErrorRender();
+    if (loading && onLoadingRender) return onLoadingRender();
+    if (onEmptyRender) return onEmptyRender();
+  };
   return (
     <RCTable
       data={!loading ? data : undefined}
       columns={columns}
       className={cls("w-full rounded-md border border-gray overflow-hidden", className)}
-      emptyText={loading ? onLoadingRender && onLoadingRender() : onEmptyRender && onEmptyRender()}
+      emptyText={() => getEmptyText()}
       expandable={
         onExpandRender && {
           expandedRowRender: onExpandRender,

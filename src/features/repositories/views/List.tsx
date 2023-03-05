@@ -11,14 +11,15 @@ import useRepositoriesSearch from "../domain/useRepositoriesSearch";
 
 const List = () => {
   const { currentPage, onPageChange, resetPagination } = usePagination();
-  const { onSearch, results, isFetching } = useRepositoriesSearch({ currentPage, resetPagination });
+  const { onSearch, results, isFetching, isError } = useRepositoriesSearch({ currentPage, resetPagination });
+  console.log({ isError });
 
   return (
     <Column className="gap-3">
       <Column className="md:w-1/2">
         <Search onSearch={onSearch} />
       </Column>
-      <Results items={results?.items} isFetching={isFetching} />
+      <Results items={results?.items} isFetching={isFetching} isError={isError} />
       <Row className="mt-1 ml-auto">
         <Pagination currentPage={currentPage} onPageChange={onPageChange} numResults={results?.total_count} />
       </Row>

@@ -7,14 +7,14 @@ import type { RepositoriesResult } from "../types";
 export const useSearchQuery = (query: string, page: number) => {
   const [isQueryEnabled, setIsQueryEnabled] = React.useState(false);
 
-  const { data: results, isFetching } = useQuery<RepositoriesResult>(
-    ["repositories", { query, page }],
-    () => getRepositories(query, page),
-    {
-      keepPreviousData: false,
-      enabled: isQueryEnabled,
-    }
-  );
+  const {
+    data: results,
+    isFetching,
+    isError,
+  } = useQuery<RepositoriesResult>(["repositories", { query, page }], () => getRepositories(query, page), {
+    keepPreviousData: false,
+    enabled: isQueryEnabled,
+  });
 
   React.useEffect(() => {
     if (query && !isQueryEnabled) {
@@ -22,5 +22,5 @@ export const useSearchQuery = (query: string, page: number) => {
     }
   }, [query, isQueryEnabled]);
 
-  return { results, isFetching: isFetching };
+  return { results, isFetching, isError };
 };

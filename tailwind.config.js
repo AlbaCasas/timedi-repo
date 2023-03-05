@@ -18,6 +18,7 @@ module.exports = {
       lightBackground: "#FAFAFA",
       darkBackground: "#363740",
       background: "#EAECF0",
+      error: "#d45a66",
     },
     spacing: {
       0: "0px",

@@ -5,7 +5,7 @@ import { useSearchQuery } from "../services/useSearchQuery";
 
 const useSearch = ({ currentPage, resetPagination }: { currentPage?: number; resetPagination: () => void }) => {
   const [query, setQuery] = React.useState("");
-  const { results, isFetching } = useSearchQuery(query, currentPage || 1);
+  const { results, isFetching, isError } = useSearchQuery(query, currentPage || 1);
 
   const onSearch = (value?: string) => {
     if (value === undefined) return;
@@ -13,7 +13,7 @@ const useSearch = ({ currentPage, resetPagination }: { currentPage?: number; res
     setQuery(value);
   };
 
-  return { onSearch, results, isFetching };
+  return { onSearch, results, isFetching, isError };
 };
 
 export default useSearch;

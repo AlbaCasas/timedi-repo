@@ -8,6 +8,7 @@ import Skeleton from "@components/Skeleton";
 
 import type { RepositoriesResult, Repository } from "../../types";
 import { columns } from "./makeTable";
+import Icon from "@components/Icon";
 
 const ExpandedRow = ({ topics, description, id }: Repository) => {
   const hasDetails = description || topics.length;
@@ -35,7 +36,15 @@ const ExpandedRow = ({ topics, description, id }: Repository) => {
   );
 };
 
-const Results = ({ items, isFetching }: { items?: RepositoriesResult["items"]; isFetching: boolean }) => {
+const Results = ({
+  items,
+  isFetching,
+  isError,
+}: {
+  items?: RepositoriesResult["items"];
+  isFetching?: boolean;
+  isError?: boolean;
+}) => {
   return (
     <Column className="overflow-x-auto">
       <Table
@@ -43,6 +52,7 @@ const Results = ({ items, isFetching }: { items?: RepositoriesResult["items"]; i
         columns={columns}
         rowKey="id"
         loading={isFetching}
+        error={isError}
         className="min-w-[900px]"
         onExpandRender={(repository: Repository) => <ExpandedRow {...repository} />}
         onEmptyRender={() => (
@@ -56,6 +66,12 @@ const Results = ({ items, isFetching }: { items?: RepositoriesResult["items"]; i
               return <Skeleton key={`skeleton-table-${i}`} height={64} />;
             })}
           </Column>
+        )}
+        onErrorRender={() => (
+          <Row className="w-full px-5 md:justify-center py-3 items-center gap-2">
+            <Icon name="error" className="text-error text-lg" />
+            <Text color="lightText">There has been an error with the request, please try again</Text>
+          </Row>
         )}
       />
     </Column>
