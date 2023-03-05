@@ -10,7 +10,7 @@ export const HeaderThead = ({ className, ...props }: { className?: string }) => 
 );
 
 export const HeaderTd = ({ className, children, ...props }: { className?: string; children: React.ReactNode }) => (
-  <td {...props} className={cls("px-4 py-3", className)}>
+  <td {...props} className={cls("p-3", className)}>
     <Text small color="lightText">
       {children}
     </Text>

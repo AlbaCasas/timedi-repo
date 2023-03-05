@@ -10,14 +10,18 @@ import type { RepositoriesResult, Repository } from "../../types";
 import { columns } from "./makeTable";
 
 const ExpandedRow = ({ topics, description, id }: Repository) => {
-  return (
+  const hasDetails = description || topics.length;
+
+  return hasDetails ? (
     <Column className="gap-3 w-full" key={id}>
-      <Row className="gap-1">
-        <Text small bold>
-          Description:
-        </Text>
-        <Text small>{description}</Text>
-      </Row>
+      {description && (
+        <Column className="gap-1">
+          <Text small bold>
+            Description
+          </Text>
+          <Text small>{description}</Text>
+        </Column>
+      )}
       {!!topics.length && (
         <Row className="gap-2 flex-wrap items-center">
           {topics.map((topic) => (
@@ -26,14 +30,16 @@ const ExpandedRow = ({ topics, description, id }: Repository) => {
         </Row>
       )}
     </Column>
+  ) : (
+    <Text small>No details available</Text>
   );
 };
 
-const Results = ({ results, isFetching }: { results?: RepositoriesResult; isFetching: boolean }) => {
+const Results = ({ items, isFetching }: { items?: RepositoriesResult["items"]; isFetching: boolean }) => {
   return (
     <Column className="overflow-x-auto">
       <Table
-        data={results?.items}
+        data={items}
         columns={columns}
         rowKey="id"
         loading={isFetching}

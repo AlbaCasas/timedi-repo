@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { cls } from "@core/styles/cls";
 import React from "react";
 import type { SyntheticEvent } from "react";

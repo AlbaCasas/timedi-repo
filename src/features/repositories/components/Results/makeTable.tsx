@@ -24,11 +24,8 @@ export const columns = [
   {
     title: "Repository",
     key: "repository",
-    render: (repository: Repository) => (
-      <Text small bold>
-        {repository.name}
-      </Text>
-    ),
+    dataIndex: "name",
+    render: (name: Repository["name"]) => <Text small>{name}</Text>,
   },
 
   {

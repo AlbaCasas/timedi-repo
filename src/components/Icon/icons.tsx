@@ -1,6 +1,6 @@
 import { FaGithub, FaLinkedin, FaExternalLinkAlt, FaSearch, FaStar } from "react-icons/fa";
 
-import { MdOutlineExpandLess, MdOutlineExpandMore } from "react-icons/md";
+import { MdOutlineExpandLess, MdOutlineExpandMore, MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 
 export const icons = {
   github: <FaGithub />,
@@ -10,6 +10,8 @@ export const icons = {
   star: <FaStar />,
   "arrow-up": <MdOutlineExpandLess />,
   "arrow-down": <MdOutlineExpandMore />,
+  "arrow-left": <MdKeyboardArrowLeft />,
+  "arrow-right": <MdKeyboardArrowRight />,
 };
 
 export type Icon = keyof typeof icons;
