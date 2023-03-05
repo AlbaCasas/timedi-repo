@@ -19,5 +19,8 @@
     "sourceType": "module"
   },
   "plugins": ["react", "@typescript-eslint"],
-  "rules": { "@typescript-eslint/consistent-type-imports": "error" }
+  "rules": {
+    "@typescript-eslint/consistent-type-imports": "error",
+    "@next/next/no-html-link-for-pages": ["error", "src/app"]
+  }
 }

@@ -5,5 +5,5 @@ export const getRepositories = async (q: string, page: number) =>
   get("/search/repositories", {
     q,
     per_page: `${RESULTS_PER_PAGE}`,
-    page: `${page}`
+    page: `${page}`,
   });
