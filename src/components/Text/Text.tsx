@@ -4,6 +4,8 @@ import type { Color } from "@core/styles/theme";
 
 interface TextProps {
   color?: Color;
+  small?: boolean;
+  tag?: boolean;
   body?: boolean;
   title?: boolean;
   children: React.ReactNode;
@@ -13,12 +15,14 @@ interface TextProps {
   className?: string;
 }
 
-const Text = ({ color, body = true, title, children, subtitle, bold, pointer, className }: TextProps) => {
+const Text = ({ color, small, tag, body, title, children, subtitle, bold, pointer, className }: TextProps) => {
   return (
     <span
       className={cls(
-        "text-text",
+        "text-text text-md font-light",
         {
+          "text-xs font-light": tag,
+          "text-sm font-light": small,
           "text-md font-light": body,
           "text-xl font-bold": title,
           "text-lg font-bold": subtitle,

@@ -7,11 +7,4 @@ body {
 
 a {
   text-decoration: none !important;
-  color: white;
-  &:hover,
-  &:focus,
-  &:visited,
-  &:active {
-    color: white;
-  }
 }

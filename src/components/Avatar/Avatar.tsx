@@ -12,7 +12,7 @@ interface AvatarProps {
 const Avatar = ({ className, src }: AvatarProps) => {
   return (
     <Row className={cls(className, "rounded-[100%] overflow-hidden w-[48px] h-[48px]")}>
-      <Image src={src} alt="avatar" />
+      <Image width={48} height={48} src={src} alt="avatar" />
     </Row>
   );
 };

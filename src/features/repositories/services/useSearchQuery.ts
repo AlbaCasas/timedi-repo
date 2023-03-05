@@ -1,11 +1,15 @@
 import React from "react";
-import { useQuery } from "react-query";
+import { useQuery } from "@tanstack/react-query";
 import { getRepositories } from "../api";
 
 import type { RepositoriesResult } from "../types";
 
 export const useSearchQuery = (query: string) => {
-  const { data: results, refetch } = useQuery<RepositoriesResult>(["repositories"], () => getRepositories(query), {
+  const {
+    data: results,
+    refetch,
+    isFetching,
+  } = useQuery<RepositoriesResult>(["repositories"], () => getRepositories(query), {
     enabled: false,
   });
 
@@ -15,5 +19,5 @@ export const useSearchQuery = (query: string) => {
     }
   }, [query, refetch]);
 
-  return { results };
+  return { results, isFetching };
 };

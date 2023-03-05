@@ -5,6 +5,10 @@ GLOBAL STYLES
 @import "./generic/base.scss";
 @import "./generic/generic.scss";
 
+// Skeleton loading
+@import "react-loading-skeleton/dist/skeleton.css";
+@import "./libs/rc-table.scss";
+
 /*----
 TAILWIND
 ----*/

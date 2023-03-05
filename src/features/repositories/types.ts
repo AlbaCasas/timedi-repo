@@ -5,9 +5,10 @@ export interface Repository {
   description: string;
   updated_at: string;
   created_at: string;
-  topic: string[];
+  topics: string[];
   language: string;
   stargazers_count: number;
+  html_url: string;
 }
 
 export interface RepositoriesResult {

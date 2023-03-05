@@ -16,11 +16,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body>
         <Providers>
-          <Row>
+          <Row className="w-[100vw]">
             <Sidebar />
-            <Column className="w-full">
+            <Column className="overflow-hidden flex-grow">
               <Navbar />
-              <Column className="h-full bg-background p-7">{children}</Column>
+              <Column className="h-full bg-background py-5 px-4 md:px-7">{children}</Column>
             </Column>
           </Row>
         </Providers>
