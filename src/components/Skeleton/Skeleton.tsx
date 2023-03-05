@@ -1,5 +1,6 @@
-import { cls } from "@core/styles/cls";
 import SkeletonRL from "react-loading-skeleton";
+
+import { cls } from "@core/styles/cls";
 
 interface SkeletonProps {
   lines?: number;

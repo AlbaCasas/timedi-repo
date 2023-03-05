@@ -1,5 +1,7 @@
-import PaginationComponent from "@components/Pagination";
 import React from "react";
+
+import PaginationComponent from "@components/Pagination";
+
 import { MAX_PAGES_LIMIT, RESULTS_PER_PAGE } from "../constants";
 
 const Pagination = ({

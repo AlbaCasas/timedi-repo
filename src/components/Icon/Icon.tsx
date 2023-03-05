@@ -1,8 +1,9 @@
+import React from "react";
+import type { SyntheticEvent } from "react";
+
 import { cls } from "@core/styles/cls";
 import { getColorHex } from "@core/styles/colors";
 import type { Color } from "@core/styles/theme";
-import React from "react";
-import type { SyntheticEvent } from "react";
 
 import { Icon, icons } from "./icons";
 

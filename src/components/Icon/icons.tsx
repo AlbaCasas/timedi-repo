@@ -1,5 +1,4 @@
 import { FaGithub, FaLinkedin, FaExternalLinkAlt, FaSearch, FaStar } from "react-icons/fa";
-
 import {
   MdOutlineExpandLess,
   MdOutlineExpandMore,

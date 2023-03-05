@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import Avatar from "@components/Avatar";
 import Column from "@components/Column";
 import Icon from "@components/Icon";
@@ -5,7 +7,6 @@ import Row from "@components/Row";
 import Text from "@components/Text";
 import { formatDayMonth } from "@core/dates/formats";
 import type { Repository } from "@features/repositories/types";
-import Link from "next/link";
 
 export const columns = [
   {

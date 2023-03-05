@@ -1,6 +1,7 @@
+import React from "react";
+
 import Row from "@components/Row";
 import Text from "@components/Text";
-import React from "react";
 
 const Tag = ({ children }: { children: React.ReactNode }) => {
   return (

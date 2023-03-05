@@ -1,7 +1,7 @@
 import React from "react";
 import { useQuery } from "@tanstack/react-query";
-import { getRepositories } from "../api";
 
+import { getRepositories } from "../api";
 import type { RepositoriesResult } from "../types";
 
 export const useSearchQuery = (query: string, page: number) => {

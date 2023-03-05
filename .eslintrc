@@ -8,6 +8,7 @@
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:import/recommended",
     "next/core-web-vitals"
   ],
   "parser": "@typescript-eslint/parser",
@@ -21,6 +22,19 @@
   "plugins": ["react", "@typescript-eslint"],
   "rules": {
     "@typescript-eslint/consistent-type-imports": "error",
-    "@next/next/no-html-link-for-pages": ["error", "src/app"]
+    "@next/next/no-html-link-for-pages": ["error", "src/app"],
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal", ["parent", "sibling", "index"]],
+        "pathGroups": [
+          {
+            "pattern": "@/**",
+            "group": "internal"
+          }
+        ],
+        "newlines-between": "always"
+      }
+    ]
   }
 }

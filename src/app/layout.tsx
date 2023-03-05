@@ -1,9 +1,10 @@
+import { Montserrat } from "next/font/google";
+
 import Column from "@components/Column";
 import Sidebar from "@features/layout/components/Sidebar";
 import Row from "@components/Row";
 import Navbar from "@features/layout/components/Navbar";
 import Providers from "@core/Providers";
-import { Montserrat } from "next/font/google";
 
 import "@core/styles/index.scss";
 

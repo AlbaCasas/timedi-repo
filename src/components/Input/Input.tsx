@@ -4,12 +4,12 @@ import React from "react";
 import type { SyntheticEvent } from "react";
 
 import { cls } from "@core/styles/cls";
-
-import IconComponent from "../Icon";
 import Row from "@components/Row";
 import Column from "@components/Column";
 import type { Color } from "@core/styles/theme";
 import type { Icon } from "@components/Icon/icons";
+
+import IconComponent from "../Icon";
 
 interface InputProps {
   className?: string;

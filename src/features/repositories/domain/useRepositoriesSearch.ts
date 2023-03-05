@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+
 import { useSearchQuery } from "../services/useSearchQuery";
 
 const useSearch = ({ currentPage, resetPagination }: { currentPage?: number; resetPagination: () => void }) => {

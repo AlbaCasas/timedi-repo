@@ -1,5 +1,6 @@
-import Input from "@components/Input";
 import React from "react";
+
+import Input from "@components/Input";
 
 const Search = ({ onSearch }: { onSearch: (value?: string) => void }) => {
   const searchRef = React.useRef<HTMLInputElement>(null);

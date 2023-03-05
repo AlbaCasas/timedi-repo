@@ -1,14 +1,15 @@
+import React from "react";
+
 import Column from "@components/Column";
 import Row from "@components/Row";
 import Table from "@components/Table";
 import Tag from "@components/Tag";
 import Text from "@components/Text";
-import React from "react";
 import Skeleton from "@components/Skeleton";
+import Icon from "@components/Icon";
 
 import type { RepositoriesResult, Repository } from "../../types";
 import { columns } from "./makeTable";
-import Icon from "@components/Icon";
 
 const ExpandedRow = ({ topics, description, id }: Repository) => {
   const hasDetails = description || topics.length;

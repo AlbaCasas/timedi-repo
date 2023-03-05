@@ -1,7 +1,8 @@
+import React from "react";
+
 import Avatar from "@components/Avatar";
 import Row from "@components/Row";
 import Text from "@components/Text";
-import React from "react";
 import avatarImage from "@../public/avatar.jpeg";
 
 const Navbar = () => {

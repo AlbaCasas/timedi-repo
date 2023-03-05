@@ -1,13 +1,13 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { cls } from "@core/styles/cls";
 import React from "react";
-import type { SyntheticEvent } from "react";
-
-import type { PropsWithChildren } from "react";
+import type { SyntheticEvent , PropsWithChildren } from "react";
 import RCTable from "rc-table";
-import { Wrapper, HeaderThead, HeaderTd, BodyThead, BodyTd, BodyTr } from "./components";
+
+import { cls } from "@core/styles/cls";
 import Icon from "@components/Icon";
 import Row from "@components/Row";
+
+import { Wrapper, HeaderThead, HeaderTd, BodyThead, BodyTd, BodyTr } from "./components";
 
 interface TableProps {
   data?: object[];

@@ -1,11 +1,12 @@
+import Link from "next/link";
+import React from "react";
+
 import Column from "@components/Column";
 import IconComponent from "@components/Icon";
 import type { Icon } from "@components/Icon/icons";
 import Row from "@components/Row";
 import Text from "@components/Text";
 import { cls } from "@core/styles/cls";
-import Link from "next/link";
-import React from "react";
 
 const Item = ({
   title,

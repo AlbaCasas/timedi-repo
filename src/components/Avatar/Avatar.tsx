@@ -1,7 +1,8 @@
-import Row from "@components/Row";
 import Image from "next/image";
 import type { ImageProps } from "next/image";
 import React from "react";
+
+import Row from "@components/Row";
 import { cls } from "@core/styles/cls";
 
 interface AvatarProps {

@@ -1,8 +1,10 @@
 "use client";
 
+import React from "react";
+
 import Column from "@components/Column";
 import Row from "@components/Row";
-import React from "react";
+
 import Pagination from "../components/Pagination";
 import Results from "../components/Results/Results";
 import Search from "../components/Search";
@@ -12,7 +14,6 @@ import useRepositoriesSearch from "../domain/useRepositoriesSearch";
 const List = () => {
   const { currentPage, onPageChange, resetPagination } = usePagination();
   const { onSearch, results, isFetching, isError } = useRepositoriesSearch({ currentPage, resetPagination });
-  console.log({ isError });
 
   return (
     <Column className="gap-3">
