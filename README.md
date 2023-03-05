@@ -1,10 +1,20 @@
-# TiMedi Technical Assessment
+# Ti-Medi Technical Assessment
 
-This is a technical assessment project for TiMedi. It's built using NextJS, Tailwind, and React Query.
+This is a technical assessment project for Ti-Medi. It's built using NextJS, Tailwind, and React Query.
+
+## Generating a GitHub Token
+
+This project makes use of the GitHub API to search the existing GitHub repositories.
+
+In order to make it run, you will need to generate a valid GitHub token. You can do so by following the instructions detailed in this article:
+
+[GitHub - Creating a personal access token](<[creating-a-personal-access-token](https://docs.github.com/es/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creaci%C3%B3n-de-un-personal-access-token-classic)>)
 
 ## Installation
 
-To run the project, you need to copy the content of the file `.env` to the file `.env.local`. After doing so, run the following commands in your terminal:
+To run the project, you need to copy the content of the file `.env` to the file `.env.local`. After doing so, replace the value of `NEXT_PUBLIC_GITHUB_TOKEN` with a valid GitHub token. The one specified in the current `.env` file got revoked when pushing the code to GitHub.
+
+After the env variables are set, you can run the following commands in your terminal:
 
 ```
 yarn
