@@ -1,13 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
-import type { SyntheticEvent, PropsWithChildren } from "react";
+import type { PropsWithChildren } from "react";
 import RCTable from "rc-table";
 
 import { cls } from "@core/styles/cls";
-import Icon from "@components/Icon";
-import Row from "@components/Row";
 
-import { Wrapper, HeaderThead, HeaderTd, BodyThead, BodyTd, BodyTr } from "./components";
+import { Wrapper, HeaderThead, HeaderTd, BodyThead, BodyTd, BodyTr, ExpandIcon } from "./components";
 
 interface TableProps {
   data?: object[];
@@ -21,34 +19,6 @@ interface TableProps {
   onExpandRender?: (record: any) => React.ReactNode;
   onLoadingRender?: () => React.ReactNode;
 }
-
-const ExpandIcon = ({
-  expanded,
-  onExpand,
-  record,
-}: {
-  expanded: boolean;
-  onExpand: (record: any, e: any) => void;
-  record: any;
-}) => (
-  <Row className="bg-background w-fit rounded-[100%] p-1 pointer hover:opacity-80">
-    {expanded ? (
-      <Icon
-        onClick={(e: SyntheticEvent) => onExpand(record, e)}
-        name="arrow-up"
-        color="lightText"
-        className="text-[20px]"
-      />
-    ) : (
-      <Icon
-        onClick={(e: SyntheticEvent) => onExpand(record, e)}
-        name="arrow-down"
-        color="lightText"
-        className="text-[20px]"
-      />
-    )}
-  </Row>
-);
 
 const Table = ({
   data,
