@@ -1,7 +1,11 @@
 import Column from "@components/Column";
 import React from "react";
 
-const Results = () => {
+import type { RepositoriesResult } from "../types";
+
+const Results = ({ results }: { results?: RepositoriesResult }) => {
+  console.log({ results });
+  if (!results) return <Column>empty state</Column>;
   return <Column>Results</Column>;
 };
 
