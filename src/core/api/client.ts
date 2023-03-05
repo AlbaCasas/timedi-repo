@@ -20,8 +20,6 @@ const client = async (path: Path, method: Method, { body, params }: { body?: Bod
     },
   };
 
-  console.log("token", process.env.NEXT_PUBLIC_GITHUB_TOKEN);
-
   const res = await fetch(url, options);
   if (res.status !== 200) {
     const error = await res.json();
