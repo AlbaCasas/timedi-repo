@@ -8,7 +8,7 @@ This project makes use of the GitHub API to search the existing GitHub repositor
 
 In order to make it run, you will need to generate a valid GitHub token. You can do so by following the instructions detailed in this article:
 
-[GitHub - Creating a personal access token](<[creating-a-personal-access-token](https://docs.github.com/es/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creaci%C3%B3n-de-un-personal-access-token-classic)>)
+[GitHub - Creating a personal access token](https://docs.github.com/es/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creaci%C3%B3n-de-un-personal-access-token-classic)
 
 ## Installation
 
