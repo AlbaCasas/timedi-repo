@@ -1,38 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# TiMedi Technical Assessment
 
-## Getting Started
+This is a technical assessment project for TiMedi. It's built using NextJS, Tailwind, and React Query.
 
-First, run the development server:
+## Installation
 
-```bash
-npm run dev
-# or
+To run the project, you need to copy the content of the file `.env` to the file `.env.local`. After doing so, run the following commands in your terminal:
+
+```
+yarn
 yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The `yarn` command installs all the dependencies needed for the project to run, and the `yarn dev` command starts the server on `localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Architecture
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+This project follows a vertical slices architecture, where each feature is grouped together in its own folder. The project has four main folders: `features`, `app`, `core`, and `components`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Features
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+The `features` folder contains all the client-side logic of the project. Inside each feature, you can find the following folders:
 
-## Learn More
+- `components`: contains all the components related to that feature.
+- `domain`: contains the domain logic related to that feature.
+- `services`: contains all the API calls related to that feature.
+- `views`: componetizes the different components into a view.
 
-To learn more about Next.js, take a look at the following resources:
+### App
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The `app` folder contains the pages and layout for the project as specified by `NextJS 13`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Core
 
-## Deploy on Vercel
+The `core` folder contains the setup of the different libraries used in the project.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+It also contains core utilities like the `client` used to fetch data or the dates formatting.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Components
+
+The `components` folder contains the components that make up the design system used in the project.
